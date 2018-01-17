@@ -1,24 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5QN-x7-JqJ">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Most ViewedVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MostViewedVC" customModule="QuotesOnDesign" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3Rn-Hr-Juk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <color key="backgroundColor" red="0.82745098039215681" green="0.83921568627450982" blue="0.85882352941176465" alpha="0.44846960616438358" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oIP-WN-wh1">
+                                    <size key="itemSize" width="349" height="320"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cardCell" id="P9Q-aM-FKV" customClass="CardLayoutCell" customModule="QuotesOnDesign" customModuleProvider="target">
+                                        <rect key="frame" x="32.666666666666664" y="10" width="349" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="349" height="320"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="fnO-M9-Uxz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="349" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="rEU-8n-lV6"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hawain Island" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ald-j5-wBZ">
+                                                    <rect key="frame" x="20" y="158" width="309" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PX-dU-zP1">
+                                                    <rect key="frame" x="56" y="191" width="265" height="65.666666666666686"/>
+                                                    <string key="text">With so much to see and do on each Hawaiian Island, it can be challenging to know where to start. Explore each island here to begin building your Hawaii itinerary.</string>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ald-j5-wBZ" firstAttribute="top" secondItem="fnO-M9-Uxz" secondAttribute="bottom" constant="8" id="591-va-Kug"/>
+                                            <constraint firstItem="6PX-dU-zP1" firstAttribute="leading" secondItem="P9Q-aM-FKV" secondAttribute="leadingMargin" constant="48" id="LkD-Wh-TaI"/>
+                                            <constraint firstAttribute="trailing" secondItem="fnO-M9-Uxz" secondAttribute="trailing" id="TId-Xn-1Ce"/>
+                                            <constraint firstItem="fnO-M9-Uxz" firstAttribute="leading" secondItem="P9Q-aM-FKV" secondAttribute="leading" id="Zms-OQ-Vt6"/>
+                                            <constraint firstItem="6PX-dU-zP1" firstAttribute="top" secondItem="ald-j5-wBZ" secondAttribute="bottom" constant="3" id="eqj-WS-8Of"/>
+                                            <constraint firstItem="ald-j5-wBZ" firstAttribute="leading" secondItem="P9Q-aM-FKV" secondAttribute="leading" constant="20" id="jS3-3E-1AI"/>
+                                            <constraint firstAttribute="trailing" secondItem="ald-j5-wBZ" secondAttribute="trailing" constant="20" id="o8o-mX-unW"/>
+                                            <constraint firstItem="fnO-M9-Uxz" firstAttribute="top" secondItem="P9Q-aM-FKV" secondAttribute="top" id="stw-i1-3OI"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="6PX-dU-zP1" secondAttribute="trailing" constant="20" id="zeH-dY-cxb"/>
+                                        </constraints>
+                                        <size key="customSize" width="349" height="320"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="6PX-dU-zP1" id="leL-AB-Pjf"/>
+                                            <outlet property="imageView" destination="fnO-M9-Uxz" id="cyT-H2-Bsj"/>
+                                            <outlet property="titleLabel" destination="ald-j5-wBZ" id="UKF-oi-TGK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Rn-Hr-Juk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MSS-gt-H5C"/>
+                            <constraint firstItem="3Rn-Hr-Juk" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dFl-fj-HJm"/>
+                            <constraint firstItem="3Rn-Hr-Juk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jzV-AY-DnE"/>
+                            <constraint firstItem="3Rn-Hr-Juk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tXT-yf-IYo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="309-mU-dRB"/>
+                    <navigationItem key="navigationItem" id="pvI-BZ-7If"/>
+                    <connections>
+                        <outlet property="cardsCollectionView" destination="3Rn-Hr-Juk" id="Lxh-cb-rdQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-500" y="120.98950524737631"/>
+        </scene>
+        <!--Favorite CardVC-->
+        <scene sceneID="SJe-Y2-DaS">
+            <objects>
+                <viewController id="fUv-4M-TOW" customClass="FavoriteCardVC" customModule="QuotesOnDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r4L-6v-cKg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Wm1-jf-ghl"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="CrC-LN-vrP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="muh-cm-19q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="367" y="121"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="m8t-8x-k4h">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5QN-x7-JqJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WY3-Uu-aG8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.29466292772858749" blue="0.21965952844960379" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="iI3-Ds-CeY"/>
+                        <segue destination="fUv-4M-TOW" kind="relationship" relationship="viewControllers" id="H72-zw-gMN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ca1-hu-a2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1270" y="121"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="1280" height="853"/>
+    </resources>
 </document>
